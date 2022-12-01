@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --border-radius: 10px;
+    --info-padding: 16px;
+
+    --name-size: 2.5rem;
+    --discount-size: 2.5rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    
+    background-color: var(--cream);
+    color: var(--grayish-blue);
+        
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+
+/* mobile */
+@media (max-width:375px){
+    .display-desktop {
+        display: none;
+    }
+    .preview{
+        flex-direction: column;
+    }
+    .preview_image{
+        width: 100%;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+}
+
+/* desktop */
+@media (min-width:376px) {
+    .display-mobile {
+        display: none;
+    }
+
+    .preview {
+        max-width: 600px;
+    }
+    .preview_image {
+        width: 50%;
+        border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+
+    .preview_info{
+        width: 50%;
+    }
+}
+
+
+.preview{
+    display: flex;
+    margin: 10px;
+    gap: 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+}
+
+.preview_image{
+    height: auto;
+}
+
+.preview_info{
+    display: flex;
+    gap: 20px;
+
+    padding: var(--info-padding);
+    flex-direction: column;
+}
+
+.type{
+    font-family: inherit;
+    letter-spacing: 0.3em;
+    color: var(--grayish-blue);
+    margin-top: 20px;
+    font-weight: 500;
+
+    padding-bottom: 0px;
+}
+
+.name{
+    color: black;
+    margin: 0px;
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-weight: 700;
+    font-size: var(--name-size);
+}
+
+.description{
+    font-family: inherit;
+    line-height: 1.5rem;
+}
+
+
+.price{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    color: var(--dark-cyan);
+}
+
+.discount{
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    font-size: var(--discount-size);
+}
+
+.fake{
+    text-decoration: line-through;
+}
+
+
+.add_cart{
+    font-family: inherit;
+    cursor: pointer;
+    background-color: var(--dark-cyan);
+    border: none;
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.add_cart:hover {
+    border: 1px solid var(--dark-blue);
+    background-color:hsl(158, 36%, 30%);
+}
+
+.add_cart:active {
+    border: none;
+    background-color:hsl(158, 36%, 20%);
+}
+
+.btn_test{
+    font-family: inherit;
+    font-size: 1.3rem;
+    padding: 10px;
+}
